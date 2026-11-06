@@ -1,0 +1,29 @@
+PASS  D1001 is a valid Donor ID
+PASS  1001 is rejected (no D)
+PASS  D10 is rejected (too short)
+PASS  D10A1 is rejected (letter in number)
+PASS  Name with dots and spaces is accepted
+PASS  One-letter name is rejected
+PASS  Name with symbol is rejected
+PASS  City with a space is accepted
+PASS  City with a digit is rejected
+PASS  10-digit number starting with 9 is accepted
+PASS  Number starting with 6 is accepted (boundary)
+PASS  Number starting with 5 is rejected
+PASS  5-digit number is rejected
+PASS  AB- is a valid blood group
+PASS  C+ is rejected
+PASS  Lowercase ab+ is rejected (input is uppercased first)
+PASS  29-02-2024 is valid (leap year)
+PASS  29-02-2026 is rejected (not a leap year)
+PASS  31-04-2026 is rejected (April has 30 days)
+PASS  YYYY-MM-DD format is rejected
+PASS  01-08-2026 + 90 days = 30-10-2026
+PASS  31-12-2026 + 1 day = 01-01-2027 (year change)
+PASS  Male, donated 07-08-2026: eligible exactly today
+PASS  Female, donated 09-07-2026: due in 1 day (120-day gap)
+PASS  First-time donor is eligible now
+PASS  7 days left is inside the reminder window
+PASS  8 days left is outside the reminder window
+
+Total: 27 passed, 0 failed

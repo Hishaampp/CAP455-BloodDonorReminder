@@ -1,0 +1,53 @@
+// Flowchart 2: Add new donor (Create with validation) - CA1
+// Render: dot -Tpng -Gdpi=200 flowchart_add_donor.dot -o flowchart_add_donor.png
+digraph AddDonor {
+    graph [rankdir=TB, fontname="Helvetica", bgcolor="white", pad="0.3", nodesep="0.4", ranksep="0.4"];
+    node  [fontname="Helvetica", fontsize="11", style="filled", fillcolor="white", color="#333333"];
+    edge  [fontname="Helvetica", fontsize="10", color="#444444", arrowsize="0.7"];
+
+    start  [label="Add new donor", shape=oval, fillcolor="#e4ebf5"];
+    full   [label="donorCount\n= 100?", shape=diamond];
+    fullm  [label="Show \"Donor list is full\"", shape=parallelogram];
+    rid    [label="Read Donor ID", shape=parallelogram];
+    zero   [label="ID = 0?", shape=diamond];
+    cancel [label="Show \"Cancelled\"", shape=parallelogram];
+    fmt    [label="Format D + 4\ndigits?", shape=diamond];
+    dup    [label="ID already\nexists?", shape=diamond];
+    iderr  [label="Show error message", shape=parallelogram];
+    basic  [label="Read name, sex, age\n(each re-asked until valid)", shape=parallelogram];
+    before [label="Donated\nbefore?", shape=diamond];
+    rdate  [label="Read last donation date\n(real date, not in future)", shape=parallelogram];
+    over60 [label="Age > 60?", shape=diamond];
+    rej    [label="Show \"first-time donors\nmust be 60 or younger\"", shape=parallelogram];
+    rest   [label="Read weight, blood group,\nphone, city (each validated)", shape=parallelogram];
+    store  [label="slot = &donors[donorCount]\nslot->setDetails(...)\nDonor::increaseDonorCount()", shape=box];
+    status [label="Show \"registered\" and\neligibility status", shape=parallelogram];
+    stop   [label="Return to menu", shape=oval, fillcolor="#e4ebf5"];
+
+    start -> full;
+    full -> fullm [label=" Yes"];
+    full -> rid   [label=" No"];
+    rid -> zero;
+    zero -> cancel [label=" Yes"];
+    zero -> fmt    [label=" No"];
+    fmt -> iderr   [label=" No"];
+    fmt -> dup     [label=" Yes"];
+    dup -> iderr   [label=" Yes"];
+    iderr -> rid   [label=" try again", constraint=false];
+    dup -> basic   [label=" No"];
+    basic -> before;
+    before -> rdate  [label=" Y"];
+    before -> over60 [label=" N"];
+    over60 -> rej    [label=" Yes"];
+    over60 -> rest   [label=" No"];
+    rdate -> rest;
+    rest -> store -> status -> stop;
+    fullm -> stop;
+    cancel -> stop;
+    rej -> stop;
+
+    { rank=same; full; fullm; }
+    { rank=same; zero; cancel; }
+    { rank=same; dup; iderr; }
+    { rank=same; rdate; over60; }
+}

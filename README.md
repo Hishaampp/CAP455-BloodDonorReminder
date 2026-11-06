@@ -89,4 +89,3 @@ Expected result: `Total: 27 passed, 0 failed`.
 ## AI use
 
 AI assistance (Claude, Anthropic) was used in CA1.
-# CAP455-BloodDonorReminder

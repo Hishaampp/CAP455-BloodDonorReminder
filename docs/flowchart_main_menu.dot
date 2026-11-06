@@ -1,0 +1,45 @@
+// Flowchart 1: main menu - Blood Donor Eligibility Reminder Console (CA1)
+// Render: dot -Tpng -Gdpi=200 flowchart_main_menu.dot -o flowchart_main_menu.png
+digraph MainMenu {
+    graph [rankdir=TB, fontname="Helvetica", bgcolor="white", pad="0.3", nodesep="0.35", ranksep="0.45"];
+    node  [fontname="Helvetica", fontsize="11", style="filled", fillcolor="white", color="#333333"];
+    edge  [fontname="Helvetica", fontsize="10", color="#444444", arrowsize="0.7"];
+
+    start   [label="Start", shape=oval, fillcolor="#e4ebf5"];
+    date    [label="today = system date\n(or test date from command line)", shape=box];
+    arr     [label="Create array: Donor donors[100]\ndonorCount = 0", shape=box];
+    menu    [label="Display menu\n(today's date, donors registered)", shape=parallelogram];
+    input   [label="Read choice", shape=parallelogram];
+    valid   [label="Choice is\n0 to 5?", shape=diamond];
+    err     [label="Show \"Invalid input\"", shape=parallelogram];
+    which   [label="Which\nchoice?", shape=diamond];
+
+    add     [label="1. Add new donor\n(see Flowchart 2)", shape=box, style="filled,bold"];
+    all     [label="2. Show all donors\nin a table", shape=box];
+    byid    [label="3. Read Donor ID;\nfind with pointer;\nshow record or\n\"not found\"", shape=box];
+    rem     [label="4. Reminders: list donors\neligible today and\ndue in next 7 days", shape=box];
+    grp     [label="5. Read blood group;\nlist matching donors;\ncount eligible today", shape=box];
+    stop    [label="End", shape=oval, fillcolor="#e4ebf5"];
+
+    start -> date -> arr -> menu -> input -> valid;
+    valid -> err  [label=" No"];
+    err -> input;
+    valid -> which [label=" Yes"];
+    which -> add  [label="1"];
+    which -> all  [label="2"];
+    which -> byid [label="3"];
+    which -> rem  [label="4"];
+    which -> grp  [label="5"];
+    which -> stop [label="0"];
+
+    back [label="", shape=point, width="0.01"];
+    add -> back [arrowhead=none];
+    all -> back [arrowhead=none];
+    byid -> back [arrowhead=none];
+    rem -> back [arrowhead=none];
+    grp -> back [arrowhead=none];
+    back -> menu [label=" back to menu", constraint=false];
+
+    { rank=same; add; all; byid; rem; grp; stop; }
+    { rank=same; valid; err; }
+}

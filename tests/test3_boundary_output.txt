@@ -1,0 +1,275 @@
+(Test mode: today's date is set to 05-11-2026)
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 0/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : D1001
+Full name                   : Harpreet Gill
+Sex (M/F)                   : M
+Age in years (18-65)        : 65
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 07-08-2026
+Weight in kg (45-200)       : 45
+Blood group (e.g. B+)       : A-
+Mobile number (10 digits)   : 9000000001
+City                        : Phagwara
+
+  Donor D1001 registered successfully.
+  Status: Eligible now
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 1/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : D1002
+Full name                   : Anita Rani
+Sex (M/F)                   : F
+Age in years (18-65)        : 18
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 09-07-2026
+Weight in kg (45-200)       : 200
+Blood group (e.g. B+)       : O-
+Mobile number (10 digits)   : 6000000002
+City                        : Jalandhar
+
+  Donor D1002 registered successfully.
+  Status: Due in 1 day
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 2/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : D1003
+Full name                   : Kiran Bala
+Sex (M/F)                   : F
+Age in years (18-65)        : 60
+Donated blood before? (Y/N) : N
+Weight in kg (45-200)       : 46
+Blood group (e.g. B+)       : AB+
+Mobile number (10 digits)   : 7000000003
+City                        : Amritsar
+
+  Donor D1003 registered successfully.
+  Status: Eligible now
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 3/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : D1004
+Full name                   : Vikram Joshi
+Sex (M/F)                   : M
+Age in years (18-65)        : 40
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 29-02-2026
+  Invalid date. Use DD-MM-YYYY with a real calendar date.
+Last donation (DD-MM-YYYY)  : 29-02-2024
+Weight in kg (45-200)       : 70
+Blood group (e.g. B+)       : O+
+Mobile number (10 digits)   : 8000000004
+City                        : Phagwara
+
+  Donor D1004 registered successfully.
+  Status: Eligible now
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : D1005
+Full name                   : Arjun Mehta
+Sex (M/F)                   : M
+Age in years (18-65)        : 28
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 14-08-2026
+Weight in kg (45-200)       : 65
+Blood group (e.g. B+)       : B-
+Mobile number (10 digits)   : 9000000005
+City                        : Mohali
+
+  Donor D1005 registered successfully.
+  Status: Due in 7 days
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 5/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : D1006
+Full name                   : Deepak Rao
+Sex (M/F)                   : M
+Age in years (18-65)        : 33
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 15-08-2026
+Weight in kg (45-200)       : 72
+Blood group (e.g. B+)       : A+
+Mobile number (10 digits)   : 9000000006
+City                        : Phagwara
+
+  Donor D1006 registered successfully.
+  Status: Wait 8 days
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 6/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : D1007
+Full name                   : Manpreet Kaur
+Sex (M/F)                   : F
+Age in years (18-65)        : 27
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 05-11-2026
+Weight in kg (45-200)       : 58
+Blood group (e.g. B+)       : B+
+Mobile number (10 digits)   : 9000000007
+City                        : Jalandhar
+
+  Donor D1007 registered successfully.
+  Status: Wait 120 days
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 7/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 4
+
+--- Eligibility Reminders for 05-11-2026 ---
+
+Eligible to donate today: 3
+ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
+---------------------------------------------------------------------------------------------------
+D1001  Harpreet Gill       65   M   A-     9000000001  07-08-2026    05-11-2026    Eligible now
+D1003  Kiran Bala          60   F   AB+    7000000003  Never         Any time      Eligible now
+D1004  Vikram Joshi        40   M   O+     8000000004  29-02-2024    29-05-2024    Eligible now
+
+Becoming eligible in the next 7 days: 2
+ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
+---------------------------------------------------------------------------------------------------
+D1002  Anita Rani          18   F   O-     6000000002  09-07-2026    06-11-2026    Due in 1 day
+D1005  Arjun Mehta         28   M   B-     9000000005  14-08-2026    12-11-2026    Due in 7 days
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 7/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 2
+
+--- All Donors (7) ---
+ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
+---------------------------------------------------------------------------------------------------
+D1001  Harpreet Gill       65   M   A-     9000000001  07-08-2026    05-11-2026    Eligible now
+D1002  Anita Rani          18   F   O-     6000000002  09-07-2026    06-11-2026    Due in 1 day
+D1003  Kiran Bala          60   F   AB+    7000000003  Never         Any time      Eligible now
+D1004  Vikram Joshi        40   M   O+     8000000004  29-02-2024    29-05-2024    Eligible now
+D1005  Arjun Mehta         28   M   B-     9000000005  14-08-2026    12-11-2026    Due in 7 days
+D1006  Deepak Rao          33   M   A+     9000000006  15-08-2026    13-11-2026    Wait 8 days
+D1007  Manpreet Kaur       27   F   B+     9000000007  05-11-2026    05-03-2027    Wait 120 days
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 7/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 0
+
+Thank you. Exiting program.

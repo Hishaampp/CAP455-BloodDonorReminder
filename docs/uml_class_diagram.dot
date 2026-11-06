@@ -1,0 +1,52 @@
+// UML class diagram - Blood Donor Eligibility Reminder Console (CA1)
+// Render: dot -Tpng -Gdpi=200 uml_class_diagram.dot -o uml_class_diagram.png
+digraph UML {
+    graph [rankdir=TB, fontname="Helvetica", bgcolor="white", pad="0.3", nodesep="0.7", ranksep="0.8"];
+    node  [shape=plain, fontname="Helvetica", fontsize="11"];
+    edge  [fontname="Helvetica", fontsize="10", color="#444444"];
+
+    MainProgram [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#333333">
+<TR><TD BGCOLOR="#e4ebf5"><I>«main program»</I><BR/><B>main.cpp</B></TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT">- donors : Donor[MAX_DONORS]   (MAX_DONORS = 100)<BR/>- today : Date</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT">+ addDonor(donors[], today) : void<BR/>+ showAllDonors(donors[], today) : void<BR/>+ searchById(donors[], today) : void<BR/>+ showReminders(donors[], today) : void<BR/>+ searchByBloodGroup(donors[], today) : void<BR/>+ findDonorById(list : Donor*, count : int, id : string) : Donor*<BR/>+ readNewDonorId(list : Donor*, count : int) : string</TD></TR>
+</TABLE>>];
+
+    Donor [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#333333">
+<TR><TD BGCOLOR="#e4ebf5"><B>Donor</B></TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT">- donorId : string   {unique key}<BR/>- name : string<BR/>- age : int<BR/>- gender : char<BR/>- weight : int<BR/>- bloodGroup : string<BR/>- phone : string<BR/>- city : string<BR/>- hasDonatedBefore : bool<BR/>- lastDonation : Date<BR/><U>- donorCount : int</U><BR/><U>+ MIN_AGE = 18, MAX_AGE = 65, MAX_FIRST_TIME_AGE = 60 : const int</U><BR/><U>+ MIN_WEIGHT = 45, MAX_WEIGHT = 200 : const int</U><BR/><U>+ MALE_GAP_DAYS = 90, FEMALE_GAP_DAYS = 120 : const int</U><BR/><U>+ REMINDER_DAYS = 7 : const int</U></TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT">+ setDetails(donorId, name, age, gender, weight,<BR/>        bloodGroup, phone, city, hasDonatedBefore, lastDonation) : void<BR/>+ getId() : string   «inline»<BR/>+ getName() : string   «inline»<BR/>+ getBloodGroup() : string   «inline»<BR/>+ isFirstTimeDonor() : bool   «inline»<BR/>+ getGapDays() : int   «inline»<BR/>+ hasSameId(otherId : string) : bool<BR/>+ getNextEligibleDate() : Date<BR/>+ display(today : Date) : void<BR/>+ displayRow(today : Date) : void<BR/><U>+ getDonorCount() : int</U><BR/><U>+ increaseDonorCount() : void</U><BR/><U>+ statusText(daysLeft : int) : string</U></TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT"><I>«friend»</I> daysUntilEligible(d : Donor, today : Date) : int</TD></TR>
+</TABLE>>];
+
+    Date [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#333333">
+<TR><TD BGCOLOR="#e4ebf5"><I>«struct»</I><BR/><B>Date</B></TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT">+ day : int<BR/>+ month : int<BR/>+ year : int</TD></TR>
+</TABLE>>];
+
+    Utils [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#333333">
+<TR><TD BGCOLOR="#e4ebf5"><I>«utility»</I><BR/><B>Utils</B></TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT">+ parseDate(text : string, result : Date&amp;) : bool<BR/>+ toDayNumber(d : Date) : long<BR/>+ fromDayNumber(n : long) : Date<BR/>+ formatDate(d : Date) : string<BR/>+ getToday() : Date<BR/>+ isValidDonorId(id : string) : bool<BR/>+ isValidName / isValidCity / isValidPhone /<BR/>   isValidBloodGroup(text : string) : bool<BR/>+ readLine(prompt) : string<BR/>+ readInt(prompt, min, max) : int<BR/>+ readChoice(prompt, allowed) : char</TD></TR>
+</TABLE>>];
+
+    // main.cpp owns an array of 0..100 Donor objects (composition)
+    MainProgram -> Donor [dir=both, arrowtail=diamond, arrowhead=none, headlabel="0..100  ", taillabel="1  ", label="  donors[ ]"];
+    // each Donor contains one Date (composition)
+    Donor -> Date [dir=both, arrowtail=diamond, arrowhead=none, headlabel="1  ", label="  lastDonation"];
+    // dependencies
+    Donor -> Utils [style=dashed, arrowhead=vee, label="  «uses»", constraint=false];
+    MainProgram -> Utils [style=dashed, arrowhead=vee, label="«uses»"];
+
+    { rank=same; MainProgram; Utils; }
+    { rank=same; Donor; Date; }
+}

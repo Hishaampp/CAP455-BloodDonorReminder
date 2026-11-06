@@ -1,0 +1,80 @@
+1
+D1001
+Harpreet Gill
+M
+65
+Y
+07-08-2026
+45
+A-
+9000000001
+Phagwara
+1
+D1002
+Anita Rani
+F
+18
+Y
+09-07-2026
+200
+O-
+6000000002
+Jalandhar
+1
+D1003
+Kiran Bala
+F
+60
+N
+46
+AB+
+7000000003
+Amritsar
+1
+D1004
+Vikram Joshi
+M
+40
+Y
+29-02-2026
+29-02-2024
+70
+O+
+8000000004
+Phagwara
+1
+D1005
+Arjun Mehta
+M
+28
+Y
+14-08-2026
+65
+B-
+9000000005
+Mohali
+1
+D1006
+Deepak Rao
+M
+33
+Y
+15-08-2026
+72
+A+
+9000000006
+Phagwara
+1
+D1007
+Manpreet Kaur
+F
+27
+Y
+05-11-2026
+58
+B+
+9000000007
+Jalandhar
+4
+2
+0

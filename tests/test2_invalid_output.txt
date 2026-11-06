@@ -1,0 +1,212 @@
+(Test mode: today's date is set to 05-11-2026)
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 0/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 9
+  Invalid input. Enter a whole number from 0 to 5.
+Enter choice: x
+  Invalid input. Enter a whole number from 0 to 5.
+Enter choice: 3
+
+--- Search Donor by ID ---
+  No donors registered yet.
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 0/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : D1001
+Full name                   : Rahul Sharma
+Sex (M/F)                   : M
+Age in years (18-65)        : 25
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 01-08-2026
+Weight in kg (45-200)       : 68
+Blood group (e.g. B+)       : B+
+Mobile number (10 digits)   : 9876543210
+City                        : Phagwara
+
+  Donor D1001 registered successfully.
+  Status: Eligible now
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 1/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : 1001
+  Invalid ID. Use the letter D followed by 4 digits, e.g. D1001.
+Donor ID (e.g. D1001)       : D10
+  Invalid ID. Use the letter D followed by 4 digits, e.g. D1001.
+Donor ID (e.g. D1001)       : d1001
+  Donor ID D1001 already exists. Enter a different ID.
+Donor ID (e.g. D1001)       : D1002
+Full name                   : A
+  Invalid name. Use 2-30 letters (spaces and dots allowed).
+Full name                   : R@hul
+  Invalid name. Use 2-30 letters (spaces and dots allowed).
+Full name                   : Neha Arora
+Sex (M/F)                   : X
+  Invalid choice. Enter one of: M/F
+Sex (M/F)                   : F
+Age in years (18-65)        : 17
+  Invalid input. Enter a whole number from 18 to 65.
+Age in years (18-65)        : 66
+  Invalid input. Enter a whole number from 18 to 65.
+Age in years (18-65)        : abc
+  Invalid input. Enter a whole number from 18 to 65.
+Age in years (18-65)        : 24
+Donated blood before? (Y/N) : maybe
+  Invalid choice. Enter one of: Y/N
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 2026-08-01
+  Invalid date. Use DD-MM-YYYY with a real calendar date.
+Last donation (DD-MM-YYYY)  : 31-02-2026
+  Invalid date. Use DD-MM-YYYY with a real calendar date.
+Last donation (DD-MM-YYYY)  : 10-12-2026
+  Last donation date cannot be in the future.
+Last donation (DD-MM-YYYY)  : 15-09-2026
+Weight in kg (45-200)       : 44
+  Invalid input. Enter a whole number from 45 to 200.
+Weight in kg (45-200)       : 201
+  Invalid input. Enter a whole number from 45 to 200.
+Weight in kg (45-200)       : 55
+Blood group (e.g. B+)       : C+
+  Invalid blood group. Enter one of A+ A- B+ B- AB+ AB- O+ O-.
+Blood group (e.g. B+)       : ab+
+Mobile number (10 digits)   : 12345
+  Invalid number. Enter 10 digits starting with 6, 7, 8 or 9.
+Mobile number (10 digits)   : 5876543210
+  Invalid number. Enter 10 digits starting with 6, 7, 8 or 9.
+Mobile number (10 digits)   : 98765abc10
+  Invalid number. Enter 10 digits starting with 6, 7, 8 or 9.
+Mobile number (10 digits)   : 9988776655
+City                        : Ph4gwara
+  Invalid city. Use 2-25 letters and spaces.
+City                        : New Delhi
+
+  Donor D1002 registered successfully.
+  Status: Wait 69 days
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 2/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : 0
+  Cancelled. No donor added.
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 2/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : D1003
+Full name                   : Gurmeet Singh
+Sex (M/F)                   : M
+Age in years (18-65)        : 61
+Donated blood before? (Y/N) : N
+  Not registered: first-time donors must be 60 years or younger.
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 2/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 3
+
+--- Search Donor by ID ---
+Enter Donor ID : D9999
+  No donor found with ID D9999.
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 2/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 5
+
+--- Find Donors by Blood Group ---
+Blood group (e.g. B+)       : A+
+  No donors with blood group A+.
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 2/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 0
+
+Thank you. Exiting program.

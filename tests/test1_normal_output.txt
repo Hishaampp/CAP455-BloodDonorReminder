@@ -1,0 +1,232 @@
+(Test mode: today's date is set to 05-11-2026)
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 0/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : D1001
+Full name                   : Rahul Sharma
+Sex (M/F)                   : M
+Age in years (18-65)        : 25
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 01-08-2026
+Weight in kg (45-200)       : 68
+Blood group (e.g. B+)       : B+
+Mobile number (10 digits)   : 9876543210
+City                        : Phagwara
+
+  Donor D1001 registered successfully.
+  Status: Eligible now
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 1/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : D1002
+Full name                   : Priya Verma
+Sex (M/F)                   : F
+Age in years (18-65)        : 22
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 10-07-2026
+Weight in kg (45-200)       : 52
+Blood group (e.g. B+)       : O+
+Mobile number (10 digits)   : 8765432109
+City                        : Jalandhar
+
+  Donor D1002 registered successfully.
+  Status: Due in 2 days
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 2/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : D1003
+Full name                   : Amandeep Singh
+Sex (M/F)                   : M
+Age in years (18-65)        : 30
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 01-10-2026
+Weight in kg (45-200)       : 74
+Blood group (e.g. B+)       : B+
+Mobile number (10 digits)   : 7654321098
+City                        : Amritsar
+
+  Donor D1003 registered successfully.
+  Status: Wait 55 days
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 3/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 1
+
+--- Add New Donor ---   (enter 0 as Donor ID to cancel)
+Donor ID (e.g. D1001)       : D1004
+Full name                   : Simran Kaur
+Sex (M/F)                   : F
+Age in years (18-65)        : 19
+Donated blood before? (Y/N) : N
+Weight in kg (45-200)       : 50
+Blood group (e.g. B+)       : AB-
+Mobile number (10 digits)   : 9123456780
+City                        : Kapurthala
+
+  Donor D1004 registered successfully.
+  Status: Eligible now
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 2
+
+--- All Donors (4) ---
+ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
+---------------------------------------------------------------------------------------------------
+D1001  Rahul Sharma        25   M   B+     9876543210  01-08-2026    30-10-2026    Eligible now
+D1002  Priya Verma         22   F   O+     8765432109  10-07-2026    07-11-2026    Due in 2 days
+D1003  Amandeep Singh      30   M   B+     7654321098  01-10-2026    30-12-2026    Wait 55 days
+D1004  Simran Kaur         19   F   AB-    9123456780  Never         Any time      Eligible now
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 3
+
+--- Search Donor by ID ---
+Enter Donor ID : D1002
+
+  Donor ID      : D1002
+  Name          : Priya Verma
+  Age / Sex     : 22 / F
+  Weight        : 52 kg
+  Blood group   : O+
+  Phone         : 8765432109
+  City          : Jalandhar
+  Last donation : 10-07-2026
+  Next eligible : 07-11-2026  (gap of 120 days)
+  Status        : Due in 2 days
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 4
+
+--- Eligibility Reminders for 05-11-2026 ---
+
+Eligible to donate today: 2
+ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
+---------------------------------------------------------------------------------------------------
+D1001  Rahul Sharma        25   M   B+     9876543210  01-08-2026    30-10-2026    Eligible now
+D1004  Simran Kaur         19   F   AB-    9123456780  Never         Any time      Eligible now
+
+Becoming eligible in the next 7 days: 1
+ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
+---------------------------------------------------------------------------------------------------
+D1002  Priya Verma         22   F   O+     8765432109  10-07-2026    07-11-2026    Due in 2 days
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 5
+
+--- Find Donors by Blood Group ---
+Blood group (e.g. B+)       : B+
+ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
+---------------------------------------------------------------------------------------------------
+D1001  Rahul Sharma        25   M   B+     9876543210  01-08-2026    30-10-2026    Eligible now
+D1003  Amandeep Singh      30   M   B+     7654321098  01-10-2026    30-12-2026    Wait 55 days
+
+  1 of 2 B+ donor(s) can donate today.
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  0. Exit
+------------------------------------------------------------
+Enter choice: 0
+
+Thank you. Exiting program.
