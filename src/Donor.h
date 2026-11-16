@@ -1,84 +1,111 @@
-/*
- * File    : Donor.h
- * Project : Blood Donor Eligibility Reminder Console (CAP455 Minor Project)
- * Phase   : CA1 - Design & Create
- * Purpose : Donor entity class. One Donor object holds one donor's record.
- *
- * Eligibility rules follow the NBTC "Guidelines for Blood Donor Selection &
- * Blood Donor Referral" (2017): age 18-65 (first-time donors up to 60),
- * weight at least 45 kg, and a gap of 90 days (male) or 120 days (female)
- * between two whole blood donations.
- */
+// Donor.h
+// The Donor class. One Donor object = one blood donor.
+//
+// Rules (NBTC 2017 guidelines):
+//   age 18 to 65 (first time donor max 60), weight at least 45 kg,
+//   gap between donations: 90 days for male, 120 days for female.
+
 #ifndef DONOR_H
 #define DONOR_H
 
 #include <string>
 #include "Utils.h"
+using namespace std;
 
-const int MAX_DONORS = 100;   // size of the donor array (in-memory storage for CA1)
+const int MAX_DONORS = 100;
+
+// CA2: a fixed size record that is written to the binary file.
+// I can't write a string straight to a file because a string only keeps
+// a pointer to its text. So I copy everything into char arrays first.
+struct DonorRecord {
+    char id[6];
+    char name[31];
+    int age;
+    char gender;
+    int weight;
+    char bloodGroup[4];
+    char phone[11];
+    char city[26];
+    bool donatedBefore;
+    Date lastDonation;
+};
 
 class Donor {
 private:
-    std::string donorId;       // unique key, e.g. D1001
-    std::string name;
+    string id;            // unique key, like D1001
+    string name;
     int age;
-    char gender;               // 'M' or 'F'
-    int weight;                // in kg
-    std::string bloodGroup;    // A+, A-, B+, B-, AB+, AB-, O+, O-
-    std::string phone;         // 10-digit mobile number
-    std::string city;
-    bool hasDonatedBefore;
-    Date lastDonation;         // used only when hasDonatedBefore is true
+    char gender;          // M or F
+    int weight;           // kg
+    string bloodGroup;
+    string phone;
+    string city;
+    bool donatedBefore;
+    Date lastDonation;    // only used if donatedBefore is true
 
-    static int donorCount;     // how many donors have been registered
+    static int donorCount;    // how many donors are registered
+    static int objectCount;   // how many Donor objects exist right now
 
 public:
-    // Rule values shared by every donor, so they are static constants
+    // rule values, same for every donor so they are static
     static const int MIN_AGE = 18;
     static const int MAX_AGE = 65;
-    static const int MAX_FIRST_TIME_AGE = 60;
+    static const int FIRST_TIME_MAX_AGE = 60;
     static const int MIN_WEIGHT = 45;
     static const int MAX_WEIGHT = 200;
-    static const int MALE_GAP_DAYS = 90;
-    static const int FEMALE_GAP_DAYS = 120;
-    static const int REMINDER_DAYS = 7;   // "due soon" window for reminders
+    static const int MALE_GAP = 90;
+    static const int FEMALE_GAP = 120;
+    static const int REMINDER_DAYS = 7;
 
-    // Stores all details in this object. Parameter names match the data
-    // members, so "this->" is used to tell them apart.
-    void setDetails(const std::string& donorId, const std::string& name, int age,
-                    char gender, int weight, const std::string& bloodGroup,
-                    const std::string& phone, const std::string& city,
-                    bool hasDonatedBefore, const Date& lastDonation);
+    // ---- CA2: constructors and destructor ----
+    Donor();                                    // default constructor
+    Donor(string id, string name, int age, char gender, int weight,
+          string bloodGroup, string phone, string city,
+          bool donatedBefore, Date lastDonation);   // parameterised constructor
+    Donor(const Donor &other);                  // copy constructor
+    ~Donor();                                   // destructor
 
-    // Getters defined inside the class body are inline automatically
-    std::string getId() const { return donorId; }
-    std::string getName() const { return name; }
-    std::string getBloodGroup() const { return bloodGroup; }
+    // getters (inline because they are written inside the class)
+    string getId() const { return id; }
+    string getName() const { return name; }
+    string getBloodGroup() const { return bloodGroup; }
+    string getPhone() const { return phone; }
+    string getCity() const { return city; }
 
-    // Declared here, defined below the class with the inline keyword
-    inline bool isFirstTimeDonor() const;
+    // setters used by the update option
+    void setPhone(string phone) { this->phone = phone; }
+    void setCity(string city) { this->city = city; }
+    void setLastDonation(Date d);
+
+    inline bool isFirstTime() const;
     inline int getGapDays() const;
 
-    bool hasSameId(const std::string& otherId) const;
     Date getNextEligibleDate() const;
-    void display(const Date& today) const;      // full details of one donor
-    void displayRow(const Date& today) const;   // one line of the donor table
+    void showDetails(Date today) const;   // full details of one donor
+    void showRow(Date today) const;       // one line in the table
 
-    // Static members work on the class as a whole, not on one object
+    // CA2: change between Donor object and file record
+    DonorRecord toRecord() const;
+    void fromRecord(const DonorRecord &r);
+
+    // static functions
     static int getDonorCount() { return donorCount; }
-    static void increaseDonorCount() { donorCount++; }
-    static std::string statusText(int daysLeft);
+    static void addDonorCount() { donorCount++; }
+    static int getObjectCount() { return objectCount; }
+    static string getStatus(int daysLeft);
 
-    // Friend function: not a member, but allowed to read private data
-    friend int daysUntilEligible(const Donor& d, const Date& today);
+    // friend function: not a member but can read private data
+    friend int daysLeft(const Donor &d, Date today);
 };
 
-inline bool Donor::isFirstTimeDonor() const {
-    return !hasDonatedBefore;
+inline bool Donor::isFirstTime() const {
+    return !donatedBefore;
 }
 
 inline int Donor::getGapDays() const {
-    return (gender == 'M') ? MALE_GAP_DAYS : FEMALE_GAP_DAYS;
+    if (gender == 'M')
+        return MALE_GAP;
+    return FEMALE_GAP;
 }
 
 #endif
