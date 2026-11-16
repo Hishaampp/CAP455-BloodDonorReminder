@@ -1,4 +1,4 @@
-// UML class diagram - Blood Donor Eligibility Reminder Console (CA1)
+// UML class diagram - Blood Donor Eligibility Reminder Console (CA2)
 // Render: dot -Tpng -Gdpi=200 uml_class_diagram.dot -o uml_class_diagram.png
 digraph UML {
     graph [rankdir=TB, fontname="Helvetica", bgcolor="white", pad="0.3", nodesep="0.7", ranksep="0.8"];
@@ -9,20 +9,27 @@ digraph UML {
 <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#333333">
 <TR><TD BGCOLOR="#e4ebf5"><I>«main program»</I><BR/><B>main.cpp</B></TD></TR>
 <HR/>
-<TR><TD ALIGN="LEFT" BALIGN="LEFT">- donors : Donor[MAX_DONORS]   (MAX_DONORS = 100)<BR/>- today : Date</TD></TR>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT">- donors : Donor[100]<BR/>- today : Date</TD></TR>
 <HR/>
-<TR><TD ALIGN="LEFT" BALIGN="LEFT">+ addDonor(donors[], today) : void<BR/>+ showAllDonors(donors[], today) : void<BR/>+ searchById(donors[], today) : void<BR/>+ showReminders(donors[], today) : void<BR/>+ searchByBloodGroup(donors[], today) : void<BR/>+ findDonorById(list : Donor*, count : int, id : string) : Donor*<BR/>+ readNewDonorId(list : Donor*, count : int) : string</TD></TR>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT">+ addDonor(donors[], today)<BR/>+ showAllDonors(donors[], today)<BR/>+ searchById(today)<BR/>+ showReminders(donors[], today)<BR/>+ searchByBloodGroup(donors[], today)<BR/>+ updateDonor(donors[], today)<BR/>+ findDonor(list : Donor*, count, id) : Donor*</TD></TR>
 </TABLE>>];
 
     Donor [label=<
 <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#333333">
 <TR><TD BGCOLOR="#e4ebf5"><B>Donor</B></TD></TR>
 <HR/>
-<TR><TD ALIGN="LEFT" BALIGN="LEFT">- donorId : string   {unique key}<BR/>- name : string<BR/>- age : int<BR/>- gender : char<BR/>- weight : int<BR/>- bloodGroup : string<BR/>- phone : string<BR/>- city : string<BR/>- hasDonatedBefore : bool<BR/>- lastDonation : Date<BR/><U>- donorCount : int</U><BR/><U>+ MIN_AGE = 18, MAX_AGE = 65, MAX_FIRST_TIME_AGE = 60 : const int</U><BR/><U>+ MIN_WEIGHT = 45, MAX_WEIGHT = 200 : const int</U><BR/><U>+ MALE_GAP_DAYS = 90, FEMALE_GAP_DAYS = 120 : const int</U><BR/><U>+ REMINDER_DAYS = 7 : const int</U></TD></TR>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT">- id : string   {unique key}<BR/>- name : string<BR/>- age : int<BR/>- gender : char<BR/>- weight : int<BR/>- bloodGroup : string<BR/>- phone : string<BR/>- city : string<BR/>- donatedBefore : bool<BR/>- lastDonation : Date<BR/><U>- donorCount : int</U><BR/><U>- objectCount : int</U><BR/><U>+ MIN_AGE, MAX_AGE, FIRST_TIME_MAX_AGE, MIN_WEIGHT,</U><BR/><U>   MAX_WEIGHT, MALE_GAP, FEMALE_GAP, REMINDER_DAYS : const int</U></TD></TR>
 <HR/>
-<TR><TD ALIGN="LEFT" BALIGN="LEFT">+ setDetails(donorId, name, age, gender, weight,<BR/>        bloodGroup, phone, city, hasDonatedBefore, lastDonation) : void<BR/>+ getId() : string   «inline»<BR/>+ getName() : string   «inline»<BR/>+ getBloodGroup() : string   «inline»<BR/>+ isFirstTimeDonor() : bool   «inline»<BR/>+ getGapDays() : int   «inline»<BR/>+ hasSameId(otherId : string) : bool<BR/>+ getNextEligibleDate() : Date<BR/>+ display(today : Date) : void<BR/>+ displayRow(today : Date) : void<BR/><U>+ getDonorCount() : int</U><BR/><U>+ increaseDonorCount() : void</U><BR/><U>+ statusText(daysLeft : int) : string</U></TD></TR>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT">+ Donor()<BR/>+ Donor(id, name, age, gender, weight, bloodGroup,<BR/>        phone, city, donatedBefore, lastDonation)<BR/>+ Donor(other : const Donor&amp;)<BR/>+ ~Donor()<BR/>+ getId(), getName(), getBloodGroup(), getPhone(), getCity()   «inline»<BR/>+ setPhone(), setCity(), setLastDonation()<BR/>+ isFirstTime() : bool   «inline»<BR/>+ getGapDays() : int   «inline»<BR/>+ getNextEligibleDate() : Date<BR/>+ showDetails(today), showRow(today)<BR/>+ toRecord() : DonorRecord<BR/>+ fromRecord(r : DonorRecord)<BR/><U>+ getDonorCount(), addDonorCount(), getObjectCount()</U><BR/><U>+ getStatus(daysLeft : int) : string</U></TD></TR>
 <HR/>
-<TR><TD ALIGN="LEFT" BALIGN="LEFT"><I>«friend»</I> daysUntilEligible(d : Donor, today : Date) : int</TD></TR>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT"><I>«friend»</I> daysLeft(d : Donor, today : Date) : int</TD></TR>
+</TABLE>>];
+
+    Record [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#333333">
+<TR><TD BGCOLOR="#e4ebf5"><I>«struct»</I><BR/><B>DonorRecord</B></TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT">+ id : char[6]<BR/>+ name : char[31]<BR/>+ age, weight : int<BR/>+ gender : char<BR/>+ bloodGroup : char[4]<BR/>+ phone : char[11]<BR/>+ city : char[26]<BR/>+ donatedBefore : bool<BR/>+ lastDonation : Date</TD></TR>
 </TABLE>>];
 
     Date [label=<
@@ -32,21 +39,27 @@ digraph UML {
 <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ day : int<BR/>+ month : int<BR/>+ year : int</TD></TR>
 </TABLE>>];
 
+    Files [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#333333">
+<TR><TD BGCOLOR="#e4ebf5"><I>«utility»</I><BR/><B>FileHandler</B></TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT">+ loadAllDonors(file, donors[], max) : int<BR/>+ saveDonor(file, d) : bool<BR/>+ findPositionInFile(file, id) : int   (seekg)<BR/>+ readDonorAt(file, pos, d) : bool   (seekg)<BR/>+ updateDonorAt(file, pos, d) : bool   (seekp)<BR/>+ countRecords(file) : int</TD></TR>
+</TABLE>>];
+
     Utils [label=<
 <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#333333">
 <TR><TD BGCOLOR="#e4ebf5"><I>«utility»</I><BR/><B>Utils</B></TD></TR>
 <HR/>
-<TR><TD ALIGN="LEFT" BALIGN="LEFT">+ parseDate(text : string, result : Date&amp;) : bool<BR/>+ toDayNumber(d : Date) : long<BR/>+ fromDayNumber(n : long) : Date<BR/>+ formatDate(d : Date) : string<BR/>+ getToday() : Date<BR/>+ isValidDonorId(id : string) : bool<BR/>+ isValidName / isValidCity / isValidPhone /<BR/>   isValidBloodGroup(text : string) : bool<BR/>+ readLine(prompt) : string<BR/>+ readInt(prompt, min, max) : int<BR/>+ readChoice(prompt, allowed) : char</TD></TR>
+<TR><TD ALIGN="LEFT" BALIGN="LEFT">+ stringToDate, dateToDays, daysToDate,<BR/>   dateToString, getTodayDate<BR/>+ isValidId, isValidName, isValidCity,<BR/>   isValidPhone, isValidBloodGroup<BR/>+ inputText, inputNumber, inputChoice</TD></TR>
 </TABLE>>];
 
-    // main.cpp owns an array of 0..100 Donor objects (composition)
     MainProgram -> Donor [dir=both, arrowtail=diamond, arrowhead=none, headlabel="0..100  ", taillabel="1  ", label="  donors[ ]"];
-    // each Donor contains one Date (composition)
     Donor -> Date [dir=both, arrowtail=diamond, arrowhead=none, headlabel="1  ", label="  lastDonation"];
-    // dependencies
-    Donor -> Utils [style=dashed, arrowhead=vee, label="  «uses»", constraint=false];
+    Donor -> Record [style=dashed, arrowhead=vee, label="  toRecord / fromRecord"];
+    Files -> Record [style=dashed, arrowhead=vee, label="  reads / writes"];
+    MainProgram -> Files [style=dashed, arrowhead=vee, label="«uses»"];
     MainProgram -> Utils [style=dashed, arrowhead=vee, label="«uses»"];
 
-    { rank=same; MainProgram; Utils; }
-    { rank=same; Donor; Date; }
+    { rank=same; MainProgram; Files; Utils; }
+    { rank=same; Donor; Record; Date; }
 }

@@ -1,4 +1,4 @@
-// Flowchart 1: main menu - Blood Donor Eligibility Reminder Console (CA1)
+// Flowchart 1: main menu - Blood Donor Eligibility Reminder Console (CA2)
 // Render: dot -Tpng -Gdpi=200 flowchart_main_menu.dot -o flowchart_main_menu.png
 digraph MainMenu {
     graph [rankdir=TB, fontname="Helvetica", bgcolor="white", pad="0.3", nodesep="0.35", ranksep="0.45"];
@@ -7,21 +7,23 @@ digraph MainMenu {
 
     start   [label="Start", shape=oval, fillcolor="#e4ebf5"];
     date    [label="today = system date\n(or test date from command line)", shape=box];
-    arr     [label="Create array: Donor donors[100]\ndonorCount = 0", shape=box];
+    arr     [label="Create array: Donor donors[100]", shape=box];
+    load    [label="Load saved donors from\ndata/donors.dat into the array", shape=box];
     menu    [label="Display menu\n(today's date, donors registered)", shape=parallelogram];
     input   [label="Read choice", shape=parallelogram];
-    valid   [label="Choice is\n0 to 5?", shape=diamond];
+    valid   [label="Choice is\n0 to 6?", shape=diamond];
     err     [label="Show \"Invalid input\"", shape=parallelogram];
     which   [label="Which\nchoice?", shape=diamond];
 
     add     [label="1. Add new donor\n(see Flowchart 2)", shape=box, style="filled,bold"];
     all     [label="2. Show all donors\nin a table", shape=box];
-    byid    [label="3. Read Donor ID;\nfind with pointer;\nshow record or\n\"not found\"", shape=box];
+    byid    [label="3. Read Donor ID;\nfind in file with seekg;\nshow record or\n\"not found\"", shape=box];
     rem     [label="4. Reminders: list donors\neligible today and\ndue in next 7 days", shape=box];
     grp     [label="5. Read blood group;\nlist matching donors;\ncount eligible today", shape=box];
+    upd     [label="6. Update donor\n(see Flowchart 3)", shape=box, style="filled,bold"];
     stop    [label="End", shape=oval, fillcolor="#e4ebf5"];
 
-    start -> date -> arr -> menu -> input -> valid;
+    start -> date -> arr -> load -> menu -> input -> valid;
     valid -> err  [label=" No"];
     err -> input;
     valid -> which [label=" Yes"];
@@ -30,6 +32,7 @@ digraph MainMenu {
     which -> byid [label="3"];
     which -> rem  [label="4"];
     which -> grp  [label="5"];
+    which -> upd  [label="6"];
     which -> stop [label="0"];
 
     back [label="", shape=point, width="0.01"];
@@ -38,8 +41,9 @@ digraph MainMenu {
     byid -> back [arrowhead=none];
     rem -> back [arrowhead=none];
     grp -> back [arrowhead=none];
+    upd -> back [arrowhead=none];
     back -> menu [label=" back to menu", constraint=false];
 
-    { rank=same; add; all; byid; rem; grp; stop; }
+    { rank=same; add; all; byid; rem; grp; upd; stop; }
     { rank=same; valid; err; }
 }

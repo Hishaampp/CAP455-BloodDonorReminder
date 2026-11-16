@@ -1,0 +1,41 @@
+// Flowchart 3: Update donor (CA2 - seekg search and seekp update)
+// Render: dot -Tpng -Gdpi=200 flowchart_update_donor.dot -o flowchart_update_donor.png
+digraph UpdateDonor {
+    graph [rankdir=TB, fontname="Helvetica", bgcolor="white", pad="0.3", nodesep="0.4", ranksep="0.45"];
+    node  [fontname="Helvetica", fontsize="11", style="filled", fillcolor="white", color="#333333"];
+    edge  [fontname="Helvetica", fontsize="10", color="#444444", arrowsize="0.7"];
+
+    start  [label="Update donor", shape=oval, fillcolor="#e4ebf5"];
+    empty  [label="Any donors?", shape=diamond];
+    emptym [label="Show \"No donors\nregistered yet\"", shape=parallelogram];
+    rid    [label="Read Donor ID", shape=parallelogram];
+    find   [label="position = findPositionInFile(id)\n(seekg to each record)", shape=box];
+    found  [label="position\n= -1?", shape=diamond];
+    nf     [label="Show \"No donor found\"", shape=parallelogram];
+    read   [label="readDonorAt(position, d)\nshow details\nDonor before(d)  (copy)", shape=box];
+    opt    [label="Choose: 1 phone,\n2 city, 3 new donation,\n0 cancel", shape=parallelogram];
+    zero   [label="Option 0?", shape=diamond];
+    newv   [label="Read new value\n(validated)", shape=parallelogram];
+    sure   [label="Save? (Y/N)", shape=diamond];
+    cancel [label="Show \"Nothing changed\"", shape=parallelogram];
+    write  [label="updateDonorAt(position, d)\n(seekp, overwrite record)\ndonors[position] = d", shape=box];
+    done   [label="Show old -> new value", shape=parallelogram];
+    stop   [label="Return to menu", shape=oval, fillcolor="#e4ebf5"];
+
+    start -> empty;
+    empty -> emptym [label=" No"];
+    empty -> rid    [label=" Yes"];
+    rid -> find -> found;
+    found -> nf    [label=" Yes"];
+    found -> read  [label=" No"];
+    read -> opt -> zero;
+    zero -> cancel [label=" Yes"];
+    zero -> newv   [label=" No"];
+    newv -> sure;
+    sure -> cancel [label=" N"];
+    sure -> write  [label=" Y"];
+    write -> done -> stop;
+    emptym -> stop;
+    nf -> stop;
+    cancel -> stop;
+}

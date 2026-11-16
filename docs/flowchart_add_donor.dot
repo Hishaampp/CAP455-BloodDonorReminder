@@ -1,4 +1,4 @@
-// Flowchart 2: Add new donor (Create with validation) - CA1
+// Flowchart 2: Add new donor (Create with validation) - CA2
 // Render: dot -Tpng -Gdpi=200 flowchart_add_donor.dot -o flowchart_add_donor.png
 digraph AddDonor {
     graph [rankdir=TB, fontname="Helvetica", bgcolor="white", pad="0.3", nodesep="0.4", ranksep="0.4"];
@@ -20,7 +20,7 @@ digraph AddDonor {
     over60 [label="Age > 60?", shape=diamond];
     rej    [label="Show \"first-time donors\nmust be 60 or younger\"", shape=parallelogram];
     rest   [label="Read weight, blood group,\nphone, city (each validated)", shape=parallelogram];
-    store  [label="slot = &donors[donorCount]\nslot->setDetails(...)\nDonor::increaseDonorCount()", shape=box];
+    store  [label="Donor newDonor(id, name, ...)\nsaveDonor(file, newDonor)\ndonors[count] = newDonor\nDonor::addDonorCount()", shape=box];
     status [label="Show \"registered\" and\neligibility status", shape=parallelogram];
     stop   [label="Return to menu", shape=oval, fillcolor="#e4ebf5"];
 
