@@ -1,4 +1,5 @@
 (Test mode: today's date is set to 05-11-2026)
+Loaded 0 donor(s) from data/donors.dat
 
 ============================================================
         BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
@@ -10,23 +11,13 @@
   3. Search donor by ID
   4. Eligibility reminders (today + next 7 days)
   5. Find donors by blood group
+  6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 1
-
+Enter choice: 
 --- Add New Donor ---   (enter 0 as Donor ID to cancel)
-Donor ID (e.g. D1001)       : D1001
-Full name                   : Rahul Sharma
-Sex (M/F)                   : M
-Age in years (18-65)        : 25
-Donated blood before? (Y/N) : Y
-Last donation (DD-MM-YYYY)  : 01-08-2026
-Weight in kg (45-200)       : 68
-Blood group (e.g. B+)       : B+
-Mobile number (10 digits)   : 9876543210
-City                        : Phagwara
-
-  Donor D1001 registered successfully.
+Donor ID (e.g. D1001)       : Full name                   : Sex (M/F)                   : Age in years (18-65)        : Donated blood before? (Y/N) : Last donation (DD-MM-YYYY)  : Weight in kg (45-200)       : Blood group (e.g. B+)       : Mobile number (10 digits)   : City                        : 
+  Donor D1001 registered and saved to file.
   Status: Eligible now
 
 ============================================================
@@ -39,23 +30,13 @@ City                        : Phagwara
   3. Search donor by ID
   4. Eligibility reminders (today + next 7 days)
   5. Find donors by blood group
+  6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 1
-
+Enter choice: 
 --- Add New Donor ---   (enter 0 as Donor ID to cancel)
-Donor ID (e.g. D1001)       : D1002
-Full name                   : Priya Verma
-Sex (M/F)                   : F
-Age in years (18-65)        : 22
-Donated blood before? (Y/N) : Y
-Last donation (DD-MM-YYYY)  : 10-07-2026
-Weight in kg (45-200)       : 52
-Blood group (e.g. B+)       : O+
-Mobile number (10 digits)   : 8765432109
-City                        : Jalandhar
-
-  Donor D1002 registered successfully.
+Donor ID (e.g. D1001)       : Full name                   : Sex (M/F)                   : Age in years (18-65)        : Donated blood before? (Y/N) : Last donation (DD-MM-YYYY)  : Weight in kg (45-200)       : Blood group (e.g. B+)       : Mobile number (10 digits)   : City                        : 
+  Donor D1002 registered and saved to file.
   Status: Due in 2 days
 
 ============================================================
@@ -68,23 +49,13 @@ City                        : Jalandhar
   3. Search donor by ID
   4. Eligibility reminders (today + next 7 days)
   5. Find donors by blood group
+  6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 1
-
+Enter choice: 
 --- Add New Donor ---   (enter 0 as Donor ID to cancel)
-Donor ID (e.g. D1001)       : D1003
-Full name                   : Amandeep Singh
-Sex (M/F)                   : M
-Age in years (18-65)        : 30
-Donated blood before? (Y/N) : Y
-Last donation (DD-MM-YYYY)  : 01-10-2026
-Weight in kg (45-200)       : 74
-Blood group (e.g. B+)       : B+
-Mobile number (10 digits)   : 7654321098
-City                        : Amritsar
-
-  Donor D1003 registered successfully.
+Donor ID (e.g. D1001)       : Full name                   : Sex (M/F)                   : Age in years (18-65)        : Donated blood before? (Y/N) : Last donation (DD-MM-YYYY)  : Weight in kg (45-200)       : Blood group (e.g. B+)       : Mobile number (10 digits)   : City                        : 
+  Donor D1003 registered and saved to file.
   Status: Wait 55 days
 
 ============================================================
@@ -97,22 +68,13 @@ City                        : Amritsar
   3. Search donor by ID
   4. Eligibility reminders (today + next 7 days)
   5. Find donors by blood group
+  6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 1
-
+Enter choice: 
 --- Add New Donor ---   (enter 0 as Donor ID to cancel)
-Donor ID (e.g. D1001)       : D1004
-Full name                   : Simran Kaur
-Sex (M/F)                   : F
-Age in years (18-65)        : 19
-Donated blood before? (Y/N) : N
-Weight in kg (45-200)       : 50
-Blood group (e.g. B+)       : AB-
-Mobile number (10 digits)   : 9123456780
-City                        : Kapurthala
-
-  Donor D1004 registered successfully.
+Donor ID (e.g. D1001)       : Full name                   : Sex (M/F)                   : Age in years (18-65)        : Donated blood before? (Y/N) : Weight in kg (45-200)       : Blood group (e.g. B+)       : Mobile number (10 digits)   : City                        : 
+  Donor D1004 registered and saved to file.
   Status: Eligible now
 
 ============================================================
@@ -125,10 +87,10 @@ City                        : Kapurthala
   3. Search donor by ID
   4. Eligibility reminders (today + next 7 days)
   5. Find donors by blood group
+  6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 2
-
+Enter choice: 
 --- All Donors (4) ---
 ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
 ---------------------------------------------------------------------------------------------------
@@ -147,12 +109,12 @@ D1004  Simran Kaur         19   F   AB-    9123456780  Never         Any time   
   3. Search donor by ID
   4. Eligibility reminders (today + next 7 days)
   5. Find donors by blood group
+  6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 3
-
+Enter choice: 
 --- Search Donor by ID ---
-Enter Donor ID : D1002
+Enter Donor ID :   Found at record number 2 in the file.
 
   Donor ID      : D1002
   Name          : Priya Verma
@@ -175,10 +137,10 @@ Enter Donor ID : D1002
   3. Search donor by ID
   4. Eligibility reminders (today + next 7 days)
   5. Find donors by blood group
+  6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 4
-
+Enter choice: 
 --- Eligibility Reminders for 05-11-2026 ---
 
 Eligible to donate today: 2
@@ -202,13 +164,12 @@ D1002  Priya Verma         22   F   O+     8765432109  10-07-2026    07-11-2026 
   3. Search donor by ID
   4. Eligibility reminders (today + next 7 days)
   5. Find donors by blood group
+  6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 5
-
+Enter choice: 
 --- Find Donors by Blood Group ---
-Blood group (e.g. B+)       : B+
-ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
+Blood group (e.g. B+)       : ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
 ---------------------------------------------------------------------------------------------------
 D1001  Rahul Sharma        25   M   B+     9876543210  01-08-2026    30-10-2026    Eligible now
 D1003  Amandeep Singh      30   M   B+     7654321098  01-10-2026    30-12-2026    Wait 55 days
@@ -225,8 +186,8 @@ D1003  Amandeep Singh      30   M   B+     7654321098  01-10-2026    30-12-2026 
   3. Search donor by ID
   4. Eligibility reminders (today + next 7 days)
   5. Find donors by blood group
+  6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 0
-
-Thank you. Exiting program.
+Enter choice: 
+Data is saved in data/donors.dat. Bye!

@@ -1,0 +1,215 @@
+(Test mode: today's date is set to 05-11-2026)
+Loaded 4 donor(s) from data/donors.dat
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  6. Update donor
+  0. Exit
+------------------------------------------------------------
+Enter choice: 
+--- All Donors (4) ---
+ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
+---------------------------------------------------------------------------------------------------
+D1001  Rahul Sharma        25   M   B+     9876543210  01-08-2026    30-10-2026    Eligible now
+D1002  Priya Verma         22   F   O+     8765432109  10-07-2026    07-11-2026    Due in 2 days
+D1003  Amandeep Singh      30   M   B+     7654321098  01-10-2026    30-12-2026    Wait 55 days
+D1004  Simran Kaur         19   F   AB-    9123456780  Never         Any time      Eligible now
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  6. Update donor
+  0. Exit
+------------------------------------------------------------
+Enter choice: 
+--- Search Donor by ID ---
+Enter Donor ID :   Found at record number 2 in the file.
+
+  Donor ID      : D1002
+  Name          : Priya Verma
+  Age / Sex     : 22 / F
+  Weight        : 52 kg
+  Blood group   : O+
+  Phone         : 8765432109
+  City          : Jalandhar
+  Last donation : 10-07-2026
+  Next eligible : 07-11-2026  (gap of 120 days)
+  Status        : Due in 2 days
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  6. Update donor
+  0. Exit
+------------------------------------------------------------
+Enter choice: 
+--- Update Donor ---
+Enter Donor ID :   Donor ID      : D1002
+  Name          : Priya Verma
+  Age / Sex     : 22 / F
+  Weight        : 52 kg
+  Blood group   : O+
+  Phone         : 8765432109
+  City          : Jalandhar
+  Last donation : 10-07-2026
+  Next eligible : 07-11-2026  (gap of 120 days)
+  Status        : Due in 2 days
+
+  What do you want to update?
+  1. Phone number
+  2. City
+  3. Record a new donation (last donation date)
+  0. Cancel
+Enter option: Mobile number (10 digits)   : Save this change? (Y/N)     : 
+  Donor D1002 updated in the file.
+  Phone: 8765432109 -> 9123400000
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  6. Update donor
+  0. Exit
+------------------------------------------------------------
+Enter choice: 
+--- Update Donor ---
+Enter Donor ID :   Donor ID      : D1003
+  Name          : Amandeep Singh
+  Age / Sex     : 30 / M
+  Weight        : 74 kg
+  Blood group   : B+
+  Phone         : 7654321098
+  City          : Amritsar
+  Last donation : 01-10-2026
+  Next eligible : 30-12-2026  (gap of 90 days)
+  Status        : Wait 55 days
+
+  What do you want to update?
+  1. Phone number
+  2. City
+  3. Record a new donation (last donation date)
+  0. Cancel
+Enter option: Last donation (DD-MM-YYYY)  : Save this change? (Y/N)     : 
+  Donor D1003 updated in the file.
+  New status: Wait 86 days
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  6. Update donor
+  0. Exit
+------------------------------------------------------------
+Enter choice: 
+--- Update Donor ---
+Enter Donor ID :   Donor ID      : D1001
+  Name          : Rahul Sharma
+  Age / Sex     : 25 / M
+  Weight        : 68 kg
+  Blood group   : B+
+  Phone         : 9876543210
+  City          : Phagwara
+  Last donation : 01-08-2026
+  Next eligible : 30-10-2026  (gap of 90 days)
+  Status        : Eligible now
+
+  What do you want to update?
+  1. Phone number
+  2. City
+  3. Record a new donation (last donation date)
+  0. Cancel
+Enter option: City                        : Save this change? (Y/N)     :   Cancelled. Nothing changed.
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  6. Update donor
+  0. Exit
+------------------------------------------------------------
+Enter choice: 
+--- Update Donor ---
+Enter Donor ID :   No donor found with ID D9999.
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  6. Update donor
+  0. Exit
+------------------------------------------------------------
+Enter choice: 
+--- Eligibility Reminders for 05-11-2026 ---
+
+Eligible to donate today: 2
+ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
+---------------------------------------------------------------------------------------------------
+D1001  Rahul Sharma        25   M   B+     9876543210  01-08-2026    30-10-2026    Eligible now
+D1004  Simran Kaur         19   F   AB-    9123456780  Never         Any time      Eligible now
+
+Becoming eligible in the next 7 days: 1
+ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
+---------------------------------------------------------------------------------------------------
+D1002  Priya Verma         22   F   O+     9123400000  10-07-2026    07-11-2026    Due in 2 days
+
+============================================================
+        BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
+============================================================
+  Today: 05-11-2026            Donors registered: 4/100
+------------------------------------------------------------
+  1. Add new donor
+  2. Show all donors
+  3. Search donor by ID
+  4. Eligibility reminders (today + next 7 days)
+  5. Find donors by blood group
+  6. Update donor
+  0. Exit
+------------------------------------------------------------
+Enter choice: 
+Data is saved in data/donors.dat. Bye!
