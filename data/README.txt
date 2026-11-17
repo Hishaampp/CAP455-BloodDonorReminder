@@ -12,3 +12,6 @@ donors.dat
   time a donor is added and loads it every time it starts. Every donor takes the
   same number of bytes (one DonorRecord), so record n starts at byte
   n * sizeof(DonorRecord). Delete this file to start with an empty list.
+
+  The donors.dat in the repo is a sample: the six donors from
+  sample_donors_input.txt, 6 x 108 bytes = 648 bytes.

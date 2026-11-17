@@ -5,5 +5,3 @@ run_tests
 run_tests.exe
 *.o
 *.obj
-# CA2 data file is created at runtime
-data/donors.dat

@@ -14,9 +14,20 @@ Loaded 0 donor(s) from data/donors.dat
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 1
+
 --- Add New Donor ---   (enter 0 as Donor ID to cancel)
-Donor ID (e.g. D1001)       : Full name                   : Sex (M/F)                   : Age in years (18-65)        : Donated blood before? (Y/N) : Last donation (DD-MM-YYYY)  : Weight in kg (45-200)       : Blood group (e.g. B+)       : Mobile number (10 digits)   : City                        : 
+Donor ID (e.g. D1001)       : D1001
+Full name                   : Rahul Sharma
+Sex (M/F)                   : M
+Age in years (18-65)        : 25
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 01-08-2026
+Weight in kg (45-200)       : 68
+Blood group (e.g. B+)       : B+
+Mobile number (10 digits)   : 9876543210
+City                        : Phagwara
+
   Donor D1001 registered and saved to file.
   Status: Eligible now
 
@@ -33,9 +44,20 @@ Donor ID (e.g. D1001)       : Full name                   : Sex (M/F)           
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 1
+
 --- Add New Donor ---   (enter 0 as Donor ID to cancel)
-Donor ID (e.g. D1001)       : Full name                   : Sex (M/F)                   : Age in years (18-65)        : Donated blood before? (Y/N) : Last donation (DD-MM-YYYY)  : Weight in kg (45-200)       : Blood group (e.g. B+)       : Mobile number (10 digits)   : City                        : 
+Donor ID (e.g. D1001)       : D1002
+Full name                   : Priya Verma
+Sex (M/F)                   : F
+Age in years (18-65)        : 22
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 10-07-2026
+Weight in kg (45-200)       : 52
+Blood group (e.g. B+)       : O+
+Mobile number (10 digits)   : 8765432109
+City                        : Jalandhar
+
   Donor D1002 registered and saved to file.
   Status: Due in 2 days
 
@@ -52,9 +74,20 @@ Donor ID (e.g. D1001)       : Full name                   : Sex (M/F)           
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 1
+
 --- Add New Donor ---   (enter 0 as Donor ID to cancel)
-Donor ID (e.g. D1001)       : Full name                   : Sex (M/F)                   : Age in years (18-65)        : Donated blood before? (Y/N) : Last donation (DD-MM-YYYY)  : Weight in kg (45-200)       : Blood group (e.g. B+)       : Mobile number (10 digits)   : City                        : 
+Donor ID (e.g. D1001)       : D1003
+Full name                   : Amandeep Singh
+Sex (M/F)                   : M
+Age in years (18-65)        : 30
+Donated blood before? (Y/N) : Y
+Last donation (DD-MM-YYYY)  : 01-10-2026
+Weight in kg (45-200)       : 74
+Blood group (e.g. B+)       : B+
+Mobile number (10 digits)   : 7654321098
+City                        : Amritsar
+
   Donor D1003 registered and saved to file.
   Status: Wait 55 days
 
@@ -71,9 +104,19 @@ Donor ID (e.g. D1001)       : Full name                   : Sex (M/F)           
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 1
+
 --- Add New Donor ---   (enter 0 as Donor ID to cancel)
-Donor ID (e.g. D1001)       : Full name                   : Sex (M/F)                   : Age in years (18-65)        : Donated blood before? (Y/N) : Weight in kg (45-200)       : Blood group (e.g. B+)       : Mobile number (10 digits)   : City                        : 
+Donor ID (e.g. D1001)       : D1004
+Full name                   : Simran Kaur
+Sex (M/F)                   : F
+Age in years (18-65)        : 19
+Donated blood before? (Y/N) : N
+Weight in kg (45-200)       : 50
+Blood group (e.g. B+)       : AB-
+Mobile number (10 digits)   : 9123456780
+City                        : Kapurthala
+
   Donor D1004 registered and saved to file.
   Status: Eligible now
 
@@ -90,7 +133,8 @@ Donor ID (e.g. D1001)       : Full name                   : Sex (M/F)           
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 2
+
 --- All Donors (4) ---
 ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
 ---------------------------------------------------------------------------------------------------
@@ -112,9 +156,11 @@ D1004  Simran Kaur         19   F   AB-    9123456780  Never         Any time   
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 3
+
 --- Search Donor by ID ---
-Enter Donor ID :   Found at record number 2 in the file.
+Enter Donor ID : D1002
+  Found at record number 2 in the file.
 
   Donor ID      : D1002
   Name          : Priya Verma
@@ -140,7 +186,8 @@ Enter Donor ID :   Found at record number 2 in the file.
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 4
+
 --- Eligibility Reminders for 05-11-2026 ---
 
 Eligible to donate today: 2
@@ -167,9 +214,11 @@ D1002  Priya Verma         22   F   O+     8765432109  10-07-2026    07-11-2026 
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 5
+
 --- Find Donors by Blood Group ---
-Blood group (e.g. B+)       : ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
+Blood group (e.g. B+)       : B+
+ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
 ---------------------------------------------------------------------------------------------------
 D1001  Rahul Sharma        25   M   B+     9876543210  01-08-2026    30-10-2026    Eligible now
 D1003  Amandeep Singh      30   M   B+     7654321098  01-10-2026    30-12-2026    Wait 55 days
@@ -189,5 +238,6 @@ D1003  Amandeep Singh      30   M   B+     7654321098  01-10-2026    30-12-2026 
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 0
+
 Data is saved in data/donors.dat. Bye!

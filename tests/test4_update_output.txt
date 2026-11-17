@@ -14,7 +14,8 @@ Loaded 4 donor(s) from data/donors.dat
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 2
+
 --- All Donors (4) ---
 ID     Name                Age  Sex Group  Phone       Last donated  Next eligible Status
 ---------------------------------------------------------------------------------------------------
@@ -36,9 +37,11 @@ D1004  Simran Kaur         19   F   AB-    9123456780  Never         Any time   
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 3
+
 --- Search Donor by ID ---
-Enter Donor ID :   Found at record number 2 in the file.
+Enter Donor ID : D1002
+  Found at record number 2 in the file.
 
   Donor ID      : D1002
   Name          : Priya Verma
@@ -64,9 +67,11 @@ Enter Donor ID :   Found at record number 2 in the file.
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 6
+
 --- Update Donor ---
-Enter Donor ID :   Donor ID      : D1002
+Enter Donor ID : D1002
+  Donor ID      : D1002
   Name          : Priya Verma
   Age / Sex     : 22 / F
   Weight        : 52 kg
@@ -82,7 +87,10 @@ Enter Donor ID :   Donor ID      : D1002
   2. City
   3. Record a new donation (last donation date)
   0. Cancel
-Enter option: Mobile number (10 digits)   : Save this change? (Y/N)     : 
+Enter option: 1
+Mobile number (10 digits)   : 9123400000
+Save this change? (Y/N)     : Y
+
   Donor D1002 updated in the file.
   Phone: 8765432109 -> 9123400000
 
@@ -99,9 +107,11 @@ Enter option: Mobile number (10 digits)   : Save this change? (Y/N)     :
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 6
+
 --- Update Donor ---
-Enter Donor ID :   Donor ID      : D1003
+Enter Donor ID : D1003
+  Donor ID      : D1003
   Name          : Amandeep Singh
   Age / Sex     : 30 / M
   Weight        : 74 kg
@@ -117,7 +127,10 @@ Enter Donor ID :   Donor ID      : D1003
   2. City
   3. Record a new donation (last donation date)
   0. Cancel
-Enter option: Last donation (DD-MM-YYYY)  : Save this change? (Y/N)     : 
+Enter option: 3
+Last donation (DD-MM-YYYY)  : 01-11-2026
+Save this change? (Y/N)     : Y
+
   Donor D1003 updated in the file.
   New status: Wait 86 days
 
@@ -134,9 +147,11 @@ Enter option: Last donation (DD-MM-YYYY)  : Save this change? (Y/N)     :
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 6
+
 --- Update Donor ---
-Enter Donor ID :   Donor ID      : D1001
+Enter Donor ID : D1001
+  Donor ID      : D1001
   Name          : Rahul Sharma
   Age / Sex     : 25 / M
   Weight        : 68 kg
@@ -152,7 +167,10 @@ Enter Donor ID :   Donor ID      : D1001
   2. City
   3. Record a new donation (last donation date)
   0. Cancel
-Enter option: City                        : Save this change? (Y/N)     :   Cancelled. Nothing changed.
+Enter option: 2
+City                        : Ludhiana
+Save this change? (Y/N)     : N
+  Cancelled. Nothing changed.
 
 ============================================================
         BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
@@ -167,9 +185,11 @@ Enter option: City                        : Save this change? (Y/N)     :   Canc
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 6
+
 --- Update Donor ---
-Enter Donor ID :   No donor found with ID D9999.
+Enter Donor ID : D9999
+  No donor found with ID D9999.
 
 ============================================================
         BLOOD DONOR ELIGIBILITY REMINDER CONSOLE
@@ -184,7 +204,8 @@ Enter Donor ID :   No donor found with ID D9999.
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 4
+
 --- Eligibility Reminders for 05-11-2026 ---
 
 Eligible to donate today: 2
@@ -211,5 +232,6 @@ D1002  Priya Verma         22   F   O+     9123400000  10-07-2026    07-11-2026 
   6. Update donor
   0. Exit
 ------------------------------------------------------------
-Enter choice: 
+Enter choice: 0
+
 Data is saved in data/donors.dat. Bye!
